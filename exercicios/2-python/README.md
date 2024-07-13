@@ -14,8 +14,7 @@ tipo_preco = type(preco)
 
 print(preco)
 print(tipo_preco)
-```
-```sh
+
 # Saídas
 1000
 <class 'int'>
@@ -27,13 +26,12 @@ tipo_juros = type(juros)
 
 print(juros)
 print(tipo_juros)
-```
 
-```sh
 # Saídas
 0.05
 <class 'float'>
 ```
+
 
 
 ### A partir dos tipos numéricos podemos realizar as quatro operações matemáticas fundamentais:
@@ -59,14 +57,10 @@ print(qtd_items_carrinho)
 
 qtd_items_carrinho = qtd_items_carrinho + 1
 print(qtd_items_carrinho)
-```
 
-```sh
 # Saída
 1
-```
 
-```sh
 # Saída
 2
 ```
@@ -79,30 +73,23 @@ quantidade = 47
 total_a_pagar = quantidade * preco
 
 print(total_a_pagar)
-```
 
-```sh
-# Saída
+# Saída 
 11.75
 ```
-
 
 ### Podemos ainda converter os tipos numéricos entre si utilizando o método nativo `int` e `float`:
 
 ```py
 print(int(3.9))
-```
 
-```sh
 # Saída
 3
 ```
 
 ```py
 print(float(10))
-```
 
-```sh
 # Saída
 10.0
 ```
@@ -120,8 +107,7 @@ mensagem = 'Olá, mundo!'
 
 print(nome)  
 print(mensagem)  
-```
-```sh
+
 # Saídas
 Maria
 Olá, mundo!
@@ -139,8 +125,7 @@ sobrenome = 'Dela Val'
 
 apresentacao = 'Olá, meu nome é ' + nome + ' ' + sobrenome + '.'
 print(apresentacao)
-```
-```sh
+
 # Saída
 Olá, meu nome é Bruno Dela Val.
 ```
@@ -155,25 +140,22 @@ Olá, meu nome é Bruno Dela Val.
 ```py
 verdadeiro = True
 print(verdadeiro)
-```
-```sh
+
 # Saída
 True
 ```
-```
+```py
 falso = False
 print(falso)
-```
-```sh
+
 # Saída
 False
 ```
 ### São do tipo `bool`.
 
-```
+```py
 print(type(True))
-````
-```sh
+
 # Saída
 <class 'bool'>
 ```
@@ -195,9 +177,7 @@ valor_do_saque = 100
 
 executar_saque = valor_do_saque <= saldo_em_conta
 print(executar_saque)
-```
 
-```sh
 # Saída
 True
 ```
@@ -210,15 +190,201 @@ codigo_de_seguranca_cadastro = '010'
 
 pode_efetuar_pagamento = codigo_de_seguranca == codigo_de_seguranca_cadastro
 print(pode_efetuar_pagamento)
-```
 
-```sh
 # Saída
 False
 ```
 
-# 2. Estrutura de Repetição
-# 3. Condicionais
+
+# 2. Estruturas de Dados
+
+### Estruturas de dados são fundamentais para armazenar e organizar dados em Python. As principais são:
+
+- Listas (`list`)
+- Tuplas (`tuple`)
+- Dicionários (`dict`)
+- Conjuntos (`set`)
+  
+## 2.1 Listas
+
+### Armazenam sequências mutáveis e ordenadas de valores. Utilizamos `[]` e são do tipo `list`:
+
+#### Exemplo: Login de Usuário
+
+```py
+usuario_web = ['Bruno Dela Val', 'bruno.delaval', 'bruno123', 'bruno.delaval@toolbox.com']
+
+print(usuario_web)
+print(type(usuario_web))
+
+# Saída
+['Bruno Dela Val', 'bruno.delaval', 'bruno123', 'bruno.delaval@toolbox.com']
+<class 'list'>
+```
+
+#### Exemplo: Lista de Frutas
+```py
+# Criando uma lista
+frutas = ["maçã", "banana", "laranja"]
+
+
+# Acessando elementos
+print(frutas[0])  # Saída: maçã
+
+
+# Adicionando elementos
+frutas.append("uva")
+print(frutas)  # Saída: ['maçã', 'banana', 'laranja', 'uva']
+
+
+# Removendo elementos
+frutas.remove("banana")
+print(frutas)  # Saída: ['maçã', 'laranja', 'uva']
+```
+
+### Podemos converter alguns tipos de variáveis em listas, como strings.
+```py
+nome = 'João'
+caracteres_nome = list(nome)
+
+
+print(nome) # Saída: João
+print(caracteres_nome) # Saída: ['J', 'o', 'ã', 'o'] 
+```
+
+## 2.2 Tuplas 
+
+### Tuplas são coleções ordenadas e imutáveis. Utilizamos `()` e são do tipo `tuple`:
+
+Exemplo: Lista de Cores
+
+```py
+# Criando uma tupla
+cores = ("vermelho", "verde", "azul")
+
+
+# Acessando elementos
+print(cores[1])  # Saída: verde
+print(type(cores))  # Saída: <class 'tuple'>
+```
+
+### Tuplas são imutáveis, portanto não podemos adicionar ou remover elementos.
+
+## 2.3 Dicionários
+
+### Armazenam sequências no formato chave-valor. Utilizamos da seguinte forma (`{'chave': 'valor'}`) e são do tipo `dict`.
+
+```py
+brasil = {'capital': 'Brasília', 'idioma': 'Português', 'populacao': 210}
+
+print(brasil.keys()) # Saída: dict_keys(['capital', 'idioma', 'populacao'])
+print(brasil.values()) # Saída: dict_values(['Brasília', 'Português', 210])
+```
+
+#### Exemplo: Cadastro de Aluno
+```py
+# Criando um dicionário
+aluno = {"nome": "Thiago", "idade": 25, "curso": "Engenharia"}
+
+
+# Acessando valores
+print(aluno["nome"])  # Saída: Thiago
+
+
+# Adicionando um novo par chave-valor
+aluno["nota"] = 90
+print(aluno)  # Saída: {'nome': 'Thiago', 'idade': 25, 'curso': 'Engenharia', 'nota': 90}
+
+
+# Removendo um par chave-valor
+del aluno["idade"]
+print(aluno)  # Saída: {'nome': 'Thiago', 'curso': 'Engenharia', 'nota': 90}
+```
+
+### Não permite chaves duplicadas.
+
+#### Exemplo: Carro
+
+```py
+carro = {
+    'marca': 'Volkswagen',
+    'modelo': 'Polo',
+    'ano': 2021,
+    'ano': 2004
+}
+
+print(carro) # Saída: {'marca': 'Volkswagen', 'modelo': 'Polo', 'ano': 2004}
+```
+
+### Podemos criar dicionários compostos:
+
+#### Exemplo: Cadastro
+
+```py
+cadastro = {
+    'bruno': {
+        'nome': 'Bruno',
+        'ano_nascimento': 1900,
+        'pais': {
+            'pai': {
+              'nome': '<nome-do-pai>',
+              'ano_nascimento': 1971
+            },
+            'mae': {
+              'nome': '<nome-da-mae>',
+              'ano_nascimento': 1973
+            },
+        }
+    }
+}
+
+print(cadastro['bruno']['pais']['mae']['ano_nascimento']) 
+
+# Saída: 1973
+```
+## 2.4. Conjuntos
+
+### Armazenam sequências imutáveis e desordenadas valores, sem repetição. São do tipo `set`:
+
+```py
+frutas = {'banana', 'maca', 'uva', 'uva'}
+
+print(frutas) # Saída: {'maca', 'banana', 'uva'}
+print(type(frutas)) # Saída: <class 'set'>
+```
+
+### Eles são úteis para operações matemáticas de diferença (`-`).
+
+#### Exemplo: Países Diferentes
+
+```py
+norte_europa = {'reino unido', 'suecia', 'russia', 'noruega', 'dinamarca'}
+escandinavia = {'noruega', 'dinamarca', 'suecia'}
+
+norte_europa_nao_escandivano = norte_europa - escandinavia
+print(norte_europa_nao_escandivano) 
+
+# Saída: {'reino unido', 'russia'}
+```
+
+### Podemos converter conjuntos para lista e vice e versa.
+
+#### Exemplo: Times Paulista
+
+```py
+times_paulistas = {'São Paulo', 'Palmeiras', 'Corinthians', 'Santos'}
+
+print(times_paulistas) # Saída: {'Corinthians', 'São Paulo', 'Santos', 'Palmeiras'}
+print(type(times_paulistas)) # Saída: <class 'set'>
+
+
+print(list(times_paulistas)) # Saída: ['Corinthians', 'São Paulo', 'Santos', 'Palmeiras']
+print(type(list(times_paulistas))) # Saída: <class 'list'>
+```
+
+# 3. Estrutura de Repetição
+
+# 4. Condicionais
 
 ### As estruturas condicionais controlam o fluxo de execução de um programa baseado em condições específicas. As principais estruturas ondicionais são:
 
