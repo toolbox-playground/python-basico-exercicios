@@ -6,7 +6,7 @@
 - **Inteiros: `int`**
 - **Decimais: `float`**
 
-### Exemplo de Variáveis Numéricas
+#### Exemplo de Variáveis Numéricas
 
 ```python
 preco = 1000
