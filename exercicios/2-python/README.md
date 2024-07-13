@@ -77,6 +77,19 @@ print(total_a_pagar)
 # Saída 
 11.75
 ```
+ #### Exemplo: Resto de uma divisão
+```py
+numerador = 11
+denominador = 3
+
+# Calculando o resto da divisão
+resto = numerador % denominador
+
+# Exibindo o resultado
+print(f"O resto da divisão de {numerador} por {denominador} é {resto}.")
+
+# Saída: O resto da divisão de 11 por 3 é 2.
+```
 
 ### Podemos ainda converter os tipos numéricos entre si utilizando o método nativo `int` e `float`:
 
@@ -105,17 +118,11 @@ print(float(10))
 nome = "Maria"
 mensagem = 'Olá, mundo!'
 
-print(nome)  
-print(mensagem)  
-
-# Saídas
-Maria
-Olá, mundo!
+print(nome)  # Saída: Maria
+print(mensagem)   # Saída: Olá, mundo!
 ```
 
-### Variáveis do tipo string podem ser manipuladas utilizando a concatenação:
-
-- Concatenação (`+`).
+### Variáveis do tipo string podem ser manipuladas utilizando a concatenação (`+`):
 
 #### Exemplo: Nome completo.
 
@@ -126,8 +133,7 @@ sobrenome = 'Dela Val'
 apresentacao = 'Olá, meu nome é ' + nome + ' ' + sobrenome + '.'
 print(apresentacao)
 
-# Saída
-Olá, meu nome é Bruno Dela Val.
+# Saída: Olá, meu nome é Bruno Dela Val.
 ```
 
 ## 1.3 Boleanos
@@ -384,9 +390,139 @@ print(type(list(times_paulistas))) # Saída: <class 'list'>
 
 # 3. Estrutura de Repetição
 
+### As estruturas de repetição permitem a execução de um bloco de código repetidas vezes. Temos principalmente dois tipos:
+
+- `for`
+- `while`
+
+### O loop `for` é utilizado quando se conhece o número de iterações com antecedência
+
+```py
+for variavel_temporaria in coleção:
+  <execute este código>
+```
+
+### Permite a execução repetida do código n vezes utilizando o `range`.
+
+```py
+for valor in range(6):
+  print(valor)
+
+    # Saídas:
+    # 0
+    # 1
+    # 2
+    # 3
+    # 4
+    # 5
+```  
+
+#### Exemplo: Soma dos valores de 0 até 100000
+```py
+soma = 0
+
+for valor in range(0, 100000):
+  soma = soma + valor
+  
+print(soma) # Saída: 4999950000
+```
+
+### Também permite a execução para todos os elementos de uma lista.
+
+
+#### Exemplo: Lista de Frutas
+```py
+frutas = ['maca', 'banana', 'laranja', 'uva', 'pera']
+
+for fruta in frutas:
+  print(fruta)
+
+  # Saídas:
+    # maca
+    # banana
+    # laranja
+    # uva
+    # pera
+```
+
+### Podemos ainda criar estruturas mais complexas aninhandos os loops
+
+#### Exemplo: Combinação de letras e números
+
+```py
+letras = ['A', 'B', 'C']
+numeros = [1, 2, 3]
+
+for letra in letras:  # Loop externo
+    for numero in numeros:  # Loop interno
+        print(f'{letra}{numero}')
+        
+        # Saídas:
+        # A1
+        # A2
+        # A3
+        # B1
+        # B2
+        # B3
+        # C1
+        # C2
+        # C3
+```
+
+### Bem como executar para todos os elementos de um dicionário
+
+#### Exemplo: Notas de alunos
+
+```py
+notas = {'Thiago': 85, 'Caio': 92, 'João': 78, 'Marcelo': 88}
+for nome, nota in notas.items():
+    print(f'Para o aluno {nome}, a nota obtida é {nota}.')
+    print('\n')
+
+    # Saídas: 
+
+    # Para o aluno Thiago, a nota obtida é 85.
+
+
+    # Para o aluno Caio, a nota obtida é 92.
+
+
+    # Para o aluno João, a nota obtida é 78.
+
+
+    # Para o aluno Marcelo, a nota obtida é 88.
+```
+
+### Já o loop `while` é usado quando se deseja repetir um bloco de código enquanto uma condição é verdadeira. 
+
+#### Exemplo: Contando de 1 a 5
+```py
+contador = 1
+while contador <= 5:
+    print(contador)
+    contador += 1
+```
+
+### É útil quando o número de iterações não é conhecido antecipadamente.
+
+#### Exemplo: Soma dos números de uma lista
+```py
+numeros = [1, 0, 83, 4, 22, 100, -3, -50, 123, -12, 34]
+soma = 0
+indice = 0
+
+while indice < len(numeros):
+    soma += numeros[indice]
+    indice += 1
+
+print(f"A soma dos números na lista é {soma}.")
+
+# Saída: A soma dos números na lista é 302.
+```
+
 # 4. Condicionais
 
-### As estruturas condicionais controlam o fluxo de execução de um programa baseado em condições específicas. As principais estruturas ondicionais são:
+### As estruturas condicionais controlam o fluxo de execução baseado em condições específicas. As principais estruturas ondicionais são:
 
   - `if`: Executa um bloco de código se a condição for verdadeira.
   - `elif`: Permite testar múltiplas condições.
