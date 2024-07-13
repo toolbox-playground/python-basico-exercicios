@@ -272,7 +272,7 @@ print(type(cores))  # Saída: <class 'tuple'>
 
 ## 2.3 Dicionários
 
-### Armazenam sequências no formato chave-valor. Utilizamos da seguinte forma (`{'chave': 'valor'}`) e são do tipo `dict`.
+### Armazenam sequências no formato chave-valor. Utilizamos da seguinte forma `{'chave': 'valor'}` e são do tipo `dict`.
 
 ```py
 brasil = {'capital': 'Brasília', 'idioma': 'Português', 'populacao': 210}
