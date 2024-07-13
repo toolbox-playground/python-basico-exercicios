@@ -236,6 +236,7 @@ frutas = ["maçã", "banana", "laranja"]
 
 # Acessando elementos
 print(frutas[0])  # Saída: maçã
+print(frutas[1)   # Saída: banana
 
 
 # Adicionando elementos
