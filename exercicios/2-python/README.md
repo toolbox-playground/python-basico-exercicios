@@ -342,7 +342,7 @@ print(cadastro['bruno']['pais']['mae']['ano_nascimento'])
 
 # Saída: 1973
 ```
-## 2.4. Conjuntos
+## 2.4 Conjuntos
 
 ### Armazenam sequências imutáveis e desordenadas valores, sem repetição. São do tipo `set`:
 
