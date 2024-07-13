@@ -219,3 +219,72 @@ False
 
 # 2. Estrutura de Repetição
 # 3. Condicionais
+
+### As estruturas condicionais controlam o fluxo de execução de um programa baseado em condições específicas. As principais estruturas ondicionais são:
+
+  - `if`: Executa um bloco de código se a condição for verdadeira.
+  - `elif`: Permite testar múltiplas condições.
+  - `else`: Executa um bloco de código se nenhuma das condições anteriores for verdadeira.
+
+### São descritos da seguinte maneira:
+
+```py
+if <booleano / comparação lógica> == True:
+  <execute este código>
+else:
+  <senão execute este código>
+```
+#### Exemplo: Pessoa maior de idade.
+
+```py
+idade = 18
+
+if idade < 18:
+    print("Você é menor de idade.")
+elif idade == 18:
+    print("Você tem exatamente 18 anos.")
+else:
+    print("Você é maior de idade.")
+```
+### Também é possível aninhar condicionais para criar lógicas mais complexas:
+
+```py
+nota = 85
+frequencia = 90
+
+if nota >= 70:
+    if frequencia >= 75:
+        print("Você foi aprovado.")
+    else:
+        print("Reprovado por baixa frequência.")
+else:
+    print("Reprovado por nota insuficiente.")
+```
+
+### Outra possibilidade é utilizar operadores lógicos como `and`, `or`, e `not` para combinar múltiplas condições.
+
+#### Exemplo: Vaga de emprego usando `and`:
+```py
+idade = 27
+tem_diploma = True
+experiencia_anos = 4
+
+if idade >= 25 and tem_diploma and experiencia_anos >= 3:
+    print("Você é elegível para a vaga de emprego.")
+else:
+    print("Você não é elegível para a vaga de emprego.")
+```
+#### Exemplo: Desconto para estudantes usando `or`:
+
+```py
+idade = 20
+estudante = True
+
+if idade < 18 or estudante:
+    print("Você tem direito a um desconto.")
+else:
+    print("Você não tem direito a um desconto.")
+```
+
+
+
