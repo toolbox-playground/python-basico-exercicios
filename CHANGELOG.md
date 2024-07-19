@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## 1.0.1 (2024-07-19)
+
+
+### Bug Fixes
+
+* adicionando dependencias ([9a90eb9](https://github.com/toolbox-playground/python-basico-exercicios/commit/9a90eb9cbe19f3e8c642aabd16a07022ca0f7efd))
+
 ## 1.0.0 (2024-07-18)
 
 
