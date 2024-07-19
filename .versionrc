@@ -1,0 +1,11 @@
+{
+    "types": [
+      {"type":"feat","section":"Features"},
+      {"type":"fix","section":"Bug Fixes"},
+      {"type":"test","section":"Tests", "hidden": true},
+      {"type":"build","section":"Build System", "hidden": true},
+      {"type":"ci","hidden":true}
+    ],
+    "commitUrlFormat": "https://bitbucket.org/toolboxdevops/python-basico-exercicios/commits/", 
+    "compareUrlFormat": "https://bitbucket.org/toolboxdevops/python-basico-exercicios/branches/compare/"   
+  }
