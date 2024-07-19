@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/toolbox-playground/python-basico-exercicios/issues"
   },
-  "homepage": "https://github.com/toolbox-playground/python-basico-exercicios#readme"
+  "homepage": "https://github.com/toolbox-playground/python-basico-exercicios#readme",
+  "dependencies": {
+    "commit-and-tag-version": "^12.4.1"
+  }
 }
