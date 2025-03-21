@@ -1,6 +1,6 @@
 import requests
 
-response = requests.get("https://google.com")
+response = requests.get("https://tbxtech.com.br/")
 print('Hello world!', response.status_code)
 
 
