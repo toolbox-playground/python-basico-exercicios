@@ -18,8 +18,10 @@ Oferecer um espaço simples e acessível para quem está iniciando na programaç
 
 ## 📁 Organização do Projeto
 
+```bash
 exercicios/ → Pasta com os exercícios temáticos
 instalacao/ → (opcional) Instruções de instalação ou setup, se necessário
+```
 Cada pasta pode conter seu próprio README.md com detalhes específicos.
 
 ## 🧩 Estrutura dos Exercícios
