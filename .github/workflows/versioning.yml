@@ -9,7 +9,7 @@ on:
       - 'package.json'
       - 'package-lock.json'
 
-  pull_request:  
+  pull_request:
 
 jobs: 
   versioning-control:
@@ -37,20 +37,20 @@ jobs:
             npm run release -- --release-as patch
             echo "{{ Patching Versioning }}"
           elif [[ $text =~ (BREAKING\ CHANGE) ]]; then
-            npm run release -- --release-as patch
+            npm run release -- --release-as major
             echo "{{ Major Versioning }}"
           elif [[ $text =~ (feat) ]]; then
-            echo "{{ Minor Versioning }}"
             npm run release -- --release-as minor
+            echo "{{ Minor Versioning }}"
           else
             npm run release -- --release-as patch
             echo "{{ Default Patching Versioning }}"
           fi
           git push --follow-tags origin main
 
-  run-python-script:  
+  run-python-scripts:  
+    if: github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
@@ -66,5 +66,6 @@ jobs:
             pip install -r requirements.txt
           fi
 
-      - name: Executar script Python
-        run: python caminho/para/seu/script.py
+      - name: Executar todos os exercícios Python
+        run: |
+          find exercicios -type f -name "*.py" -print -exec python {} \;
