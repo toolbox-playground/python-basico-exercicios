@@ -1,0 +1,47 @@
+# PYTHON
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+*.egg-info/
+*.egg
+*.sqlite3
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+.env
+*.env
+
+
+# NODE / JS
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# SISTEMAS / IDEs
+
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# TESTES / TEMPORÁRIOS
+
+*.log
+*.tmp
+.cache/
+coverage/
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+.mypy_cache/
